@@ -26,4 +26,16 @@ Seu projeto pode precisar de botões de pressão como entrada de dados. E ao pre
 </picture>
 
 
+Nota-se que o **nível alto** do sinal foi gerado mais de uma vez, e isso confunde o programa que possui um loop de leitura muito rápido, resultado na detecção involutária de mais de uma pressionada.
 
+O prejuízo é que o seu programa vai pensar que você pressionou mais de uma vez e vai avançar o processo sem você querer. Veja a imagem a seguir que mostrada pela tela de um osciloscópio que comprova o comportamento de um botão sendo pressionado.
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing_oscilas.png">
+   <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing_oscilas.png)">
+</picture>
+
+
+### Como evitar esse problema?
+
+### Usando um componente eletrônico chamado Capacitor
