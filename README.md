@@ -49,9 +49,13 @@ O prejuízo é que o seu programa vai assumir que você pressionou mais de uma v
 
 ### Pergunta: Como evitar esse problema? Por meio de 2 formas.
 
-#### (1) Usando hardware, um componente eletrônico chamado Capacitor
+### (1) Usando hardware, um componente eletrônico chamado Capacitor
 
-#### (2) Usando software, uma rotina chamada ```milis()```
+### (2) Usando software, uma rotina chamada ```milis()```
+
+
+
+### (1) Usando hardware, um componente eletrônico chamado Capacitor
 
 O capacitor é um componente eletrônico bem antigo e super importante. A função dele será **alisar** os ruídos.
 
@@ -69,9 +73,9 @@ O capacitor possui 2 placas condutores internamente separadas por um dielétrico
    <img alt="Capacitor Interno" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg)">
 </picture>
 
-Um dielétrico é um material isolante. Mas devido à quantidade de cargas numa memsa área (e isso dá-se o nom de **Volts**), esse material isolante não segura a pressão das cargas e deixa fluir. Esse fluxo de cargas dá-se o nome de **corrente elétrica**.
+Um dielétrico é um material isolante. Mas devido à quantidade de cargas numa mesma área (e isso dá-se o nom de **Volts**), esse material isolante não segura a pressão das cargas, e o resultado é a fluidez de tais cargas. Esse fluxo de cargas dá-se o nome de **corrente elétrica**.
 
-Portanto, a função do capacitor é basicamente transferir a variação de cargas elétricas de uma placa para a outra. Precisa haver a variação da carga ao longo de um intervalo de tempo para que o corrente elétrica circule dentro do capacitor.
+Portanto, a função do capacitor é basicamente transferir a variação de cargas elétricas de uma placa para a outra, e essa transferência ocorre um alisamento da variação. Precisa haver a variação da carga ao longo de um intervalo de tempo para que a corrente elétrica circule dentro do capacitor.
 
 Portanto, só repetindo: a quantidade de carga elétricas numa dada área é o mesmo que tensão elétrica e a corrente elétrica é a movimentação dessas cargas num dado instante de tempo.
 
