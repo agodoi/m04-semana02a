@@ -50,7 +50,7 @@ O prejuízo é que o seu programa vai assumir que você pressionou mais de uma v
 
 ### Resposta: Usando um componente eletrônico chamado Capacitor
 
-O capacitor é um componente eletrônico bem antigo e super importante. A função dele será **alisar** os ruídos
+O capacitor é um componente eletrônico bem antigo e super importante. A função dele será **alisar** os ruídos.
 
 A figura a seguir mostra a sua carinha:
 
@@ -84,6 +84,15 @@ O capacitor possui basicamente 2 funções:
 A função (1) é muito provável que você use no seu projeto ou o seu código-fonte pode ser tornar muito complexo para contornar o efeito indesejado do bouing. 
 
 A função (2) é pouco provável que você use no seu projeto, pois seu código-fonte pode resolver isso usando um timer interno do microcontrolador.
+
+
+# Como montar seu circuito?
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/anti_boucing.png">
+   <img alt="Anti Bouncing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/anti_boucing.png)">
+</picture>
+
 
 # Comportamento Gráfico do C
 
