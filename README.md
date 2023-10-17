@@ -56,13 +56,15 @@ O capacitor possui 2 placas condutores internamente separadas por um dielétrico
    <img alt="Capacitor Interno" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg)">
 </picture>
 
-Um dielétrico é um material isolante.
+Um dielétrico é um material isolante. Mas devido à quantidade de cargas numa memsa área (e isso dá-se o nom de **Volts**), esse material isolante não segura a pressão das cargas e deixa fluir. Esse fluxo de cargas dá-se o nome de **corrente elétrica**.
 
-A função do capacitor é basicamente transferir uma variação de cargas elétricas de uma placa para a outra. Precisa haver a variação da carga ao longo de um intervalo de tempo qualquer para que o corrente elétrica circule dentro do capacitor.
+Portanto, a função do capacitor é basicamente transferir a variação de cargas elétricas de uma placa para a outra. Precisa haver a variação da carga ao longo de um intervalo de tempo para que o corrente elétrica circule dentro do capacitor.
 
-Portanto, a quantidade de carga elétricas numa dada área é o mesmo que tensão elétrica e a corrente elétrica é a movimentação dessas cargas num dado instante de tempo.
+Portanto, só repetindo: a quantidade de carga elétricas numa dada área é o mesmo que tensão elétrica e a corrente elétrica é a movimentação dessas cargas num dado instante de tempo.
 
 O capacitor possui basicamente 2 funções:
 
-- Armazenamento de cargas elétricas que se traduz em volts armazenados;
-- Filtragem de sinais alternados ou pulsantes
+1) Armazenamento de cargas elétricas que se traduz em volts armazenados;
+2) Filtragem de sinais alternados ou pulsantes
+
+ 
