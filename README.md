@@ -18,7 +18,9 @@ O relatório deve ser produzido em sala e entregue ao professor no final da inst
 
 ## Vantagens dessa instrução para o seu projeto
 
-É provável que seu projeto usará botões de pressão como entrada de dados. Exemplo, pressione botão A para mover as opções do menu, pressione B para selecionar uma opção do menu, etc.
+É provável que seu projeto usará botões de pressão como entrada de dados. 
+
+Por exemplo, pressione botão A para mover as opções do menu, pressione B para selecionar uma opção do menu, etc.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png">
@@ -58,9 +60,7 @@ A figura a seguir mostra a sua carinha:
    <img alt="Capacitores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png)">
 </picture>
 
-
 O capacitor possui 2 placas condutores internamente separadas por um dielétrico, conforme mostra a figura a seguir:
-
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg">
