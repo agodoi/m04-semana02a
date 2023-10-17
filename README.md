@@ -36,6 +36,8 @@ O prejuízo é que o seu programa vai pensar que você pressionou mais de uma ve
 </picture>
 
 
-### Como evitar esse problema?
+### Pergunta: Como evitar esse problema? 
 
-### Usando um componente eletrônico chamado Capacitor
+### Resposta: Usando um componente eletrônico chamado Capacitor
+
+
