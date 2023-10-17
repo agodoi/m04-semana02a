@@ -44,11 +44,17 @@ O capacitor é um componente eletrônico bem antigo e super importante. A figura
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png">
-   <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png)">
+   <img alt="Cpacitores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png)">
 </picture>
 
 
-O capacitor possui 2 placas condutores internamente separadas por um dielétrico.
+O capacitor possui 2 placas condutores internamente separadas por um dielétrico, conforme mostra a figura a seguir:
+
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg">
+   <img alt="Capacitor Interno" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg)">
+</picture>
 
 Um dielétrico é um material isolante.
 
