@@ -40,4 +40,23 @@ O prejuízo é que o seu programa vai pensar que você pressionou mais de uma ve
 
 ### Resposta: Usando um componente eletrônico chamado Capacitor
 
+O capacitor é um componente eletrônico bem antigo e super importante. A figura a seguir mostra como é sua carinha:
 
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png">
+   <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png)">
+</picture>
+
+
+O capacitor possui 2 placas condutores internamente separadas por um dielétrico.
+
+Um dielétrico é um material isolante.
+
+A função do capacitor é basicamente transferir uma variação de cargas elétricas de uma placa para a outra. Precisa haver a variação da carga ao longo de um intervalo de tempo qualquer para que o corrente elétrica circule dentro do capacitor.
+
+Portanto, a quantidade de carga elétricas numa dada área é o mesmo que tensão elétrica e a corrente elétrica é a movimentação dessas cargas num dado instante de tempo.
+
+O capacitor possui basicamente 2 funções:
+
+- Armazenamento de cargas elétricas que se traduz em volts armazenados;
+- Filtragem de sinais alternados ou pulsantes
