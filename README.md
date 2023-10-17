@@ -47,13 +47,11 @@ O prejuízo é que o seu programa vai assumir que você pressionou mais de uma v
 </picture>
 
 
-### Pergunta: Como evitar esse problema?
+### Pergunta: Como evitar esse problema? Por meio de 2 formas.
 
-### Resposta: tem 2 formas
+#### (1) Usando hardware, um componente eletrônico chamado Capacitor
 
-#### Usando um componente eletrônico chamado Capacitor
-
-#### Usando um programa
+#### (2) Usando software, uma rotina chamada ```milis()```
 
 O capacitor é um componente eletrônico bem antigo e super importante. A função dele será **alisar** os ruídos.
 
