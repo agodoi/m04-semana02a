@@ -73,4 +73,25 @@ A função (1) é muito provável que você use no seu projeto ou o seu código-
 
 A função (2) é pouco provável que você use no seu projeto, pois seu código-fonte pode resolver isso usando um timer interno do microcontrolador.
 
+# Comportamento Gráfico do C
+
+## Quando fecha a chave
+
+## Quando abre a chave
+
+## Atuadores
+
+
+
+
+# Prática com circuito RC
+
+## Circuito TinkerCad
+
+## Ambiente WokWi
+
+Como compartilhar o projeto da forma correta?
+Como fazer simulações
+
+
 
