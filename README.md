@@ -47,9 +47,13 @@ O prejuízo é que o seu programa vai assumir que você pressionou mais de uma v
 </picture>
 
 
-### Pergunta: Como evitar esse problema? 
+### Pergunta: Como evitar esse problema?
 
-### Resposta: Usando um componente eletrônico chamado Capacitor
+### Resposta: tem 2 formas
+
+#### Usando um componente eletrônico chamado Capacitor
+
+#### Usando um programa
 
 O capacitor é um componente eletrônico bem antigo e super importante. A função dele será **alisar** os ruídos.
 
