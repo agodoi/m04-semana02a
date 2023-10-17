@@ -16,19 +16,21 @@ O relatório deve ser produzido em sala e entregue ao professor no final da inst
 - Simulação de sistemas embarcados
 - Uso de ferramentas computacionais para projeto, simulação e análise
 
-## Vantagens dessa instrução no seu projeto
+## Vantagens dessa instrução para o seu projeto
 
-Seu projeto pode precisar de botões de pressão como entrada de dados. E ao pressionar o botão, microscopicamente há várias pressionadas devido às imnperfeições das chapinhas metálicas de contato, gerando o sinal que se nota na imagem a seguir.
+Seu projeto pode precisar de botões de pressão como entrada de dados. E ao pressionar o botão, microscopicamente há várias pressionadas devido às imnperfeições das chapinhas metálicas de contatos internos, gerando o sinal que se nota na imagem a seguir.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing.png">
    <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing.png)">
 </picture>
 
+**ESSE EFEITO CHAMA-SE BOUNCING (REPIQUE)**
 
-Nota-se que o **nível alto** do sinal foi gerado mais de uma vez, e isso confunde o programa que possui um loop de leitura muito rápido, resultado na detecção involutária de mais de uma pressionada.
 
-O prejuízo é que o seu programa vai pensar que você pressionou mais de uma vez e vai avançar o processo sem você querer. Veja a imagem a seguir que mostrada pela tela de um osciloscópio que comprova o comportamento de um botão sendo pressionado.
+Nota-se que o **nível alto** do sinal foi gerado mais de uma vez, e isso confunde o programa que possui um loop de leitura única e muito rápido, resultando na detecção involutária de mais de uma pressionada.
+
+O prejuízo é que o seu programa vai assumir que você pressionou mais de uma vez e vai avançar o processo sem você querer. Veja a imagem a seguir que mostra, através de uma tela de um osciloscópio, o comportamento de um botão sendo pressionado.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing_oscilas.png">
@@ -40,7 +42,9 @@ O prejuízo é que o seu programa vai pensar que você pressionou mais de uma ve
 
 ### Resposta: Usando um componente eletrônico chamado Capacitor
 
-O capacitor é um componente eletrônico bem antigo e super importante. A figura a seguir mostra como é sua carinha:
+O capacitor é um componente eletrônico bem antigo e super importante. A função dele será **alisar** os ruídos
+
+A figura a seguir mostra a sua carinha:
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png">
