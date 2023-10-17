@@ -18,13 +18,12 @@ O relatório deve ser produzido em sala e entregue ao professor no final da inst
 
 ## Vantagens dessa instrução para o seu projeto
 
-Seu projeto pode precisar de botões de pressão como entrada de dados. 
+É provável que seu projeto usará botões de pressão como entrada de dados. Exemplo, pressione botão A para mover as opções do menu, pressione B para selecionar uma opção do menu, etc.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png">
    <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png)">
 </picture>
-
 
 E ao pressionar o botão, microscopicamente há várias pressionadas devido às imnperfeições das chapinhas metálicas de contatos internos, gerando o sinal que se nota na imagem a seguir.
 
