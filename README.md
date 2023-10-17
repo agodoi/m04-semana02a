@@ -64,7 +64,13 @@ Portanto, só repetindo: a quantidade de carga elétricas numa dada área é o m
 
 O capacitor possui basicamente 2 funções:
 
-1) Armazenamento de cargas elétricas que se traduz em volts armazenados;
-2) Filtragem de sinais alternados ou pulsantes
-
+1) Filtragem de sinais alternados ou pulsantes
+2) Armazenamento de cargas elétricas que se traduz em volts armazenados, que por sua vez, se traduz em tempo de carga e descaga de cargas, que se traduz em temporizador.
  
+## Voltando ao seu projeto novamente
+
+A função (1) é muito provável que você use no seu projeto ou o seu código-fonte pode ser tornar muito complexo para contornar o efeito indesejado do bouing. 
+
+A função (2) é pouco provável que você use no seu projeto, pois seu código-fonte pode resolver isso usando um timer interno do microcontrolador.
+
+
