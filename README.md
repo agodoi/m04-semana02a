@@ -167,7 +167,7 @@ void loop() {
    if (estado==HIGH && aux==1){
       aux = 0;
       cont++;
-      digitalWrite(led,HIGH); // este não é só um algoritimo de verificação, quando acionamos o botão também ascendemos um Led
+      digitalWrite(led,HIGH); // este não é só um algoritimo de verificação, quando acionamos o botão também acendemos um LED
    }
    
    if (estado==LOW && aux==0){
@@ -176,15 +176,15 @@ void loop() {
       digitalWrite(led,LOW);
    }
    
-   if (millis()-time>=500){  // imprime o número de variações a cada 0,5 segundo
-      time=millis();          //guarda o novo ponto de inicio para a proxima analise
-      Serial.print("variações = ");
-      Serial.print(cont);
-      Serial.print("\n");
-      cont = 0;
+      if (millis()-time>=500){     // imprime o número de variações a cada 0,5 segundo
+         time=millis();            // guarda o novo ponto de início para a próxima análise
+         Serial.print("variações = ");
+         Serial.print(cont);
+         Serial.print("\n");
+         cont = 0;
+      }
    }
-}
-```
+   ```
 
 # Comportamento Gráfico do C
 
