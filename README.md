@@ -165,7 +165,7 @@ void loop() {
    // necessário identificar uma constancia no estado do botão, ele precisa ser o mesmo durante 50 ms
    
    if (estado==HIGH && aux==1){
-       aux = 0;
+      aux = 0;
       cont++;
       digitalWrite(led,HIGH); // este não é só um algoritimo de verificação, quando acionamos o botão também ascendemos um Led
    }
