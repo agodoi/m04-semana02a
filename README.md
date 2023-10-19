@@ -141,47 +141,47 @@ void loop() {
 # Anti-bouncing usando Software
 
 ```
-int led = 4;
-int entrada = 7;
-int aux = 1;
-int cont =0;
-bool estado = LOW; // variável de estado do botão
-unsigned long time; // variável vara a função millis()
+int led = 4;          //declara a variável led igual a 4
+int entrada = 7;      //declara a variável entrada igual a 7
+int aux = 1;          //declara a variável aux igual a 1
+int cont = 0;         //declara a variável cont igual a 0
+bool estado = LOW;    //variável de estado do botão inicia com nível baixo
+unsigned long time;   //variável time tipo long para a função millis()
 
-void setup() {
-   pinMode(led,OUTPUT);
-   pinMode(entrada,INPUT);
-   Serial.begin(9600);
-   time = millis();
+void setup() {      //estrutura básica de qualquer arduino, chamada void setup()
+   pinMode(led,OUTPUT);      //especifica que o pino led é do tipo saída
+   pinMode(entrada,INPUT);   //especifica que a variável entrada é do tipo entrada
+   Serial.begin(9600);      //inicia a comunicação serial para vc imprimir dados nela usando Serial.print()
+   time = millis();         //grava o valor do contador interno chamado milis na variável time
 }
 
-void loop() {
+void loop() {            //estrutura básica de qualquer arduino, chamada void loop()
   
-   do{
-      estado_anterior = digitalRead(entrada);
-      delay(50);
-      estado = digitalRead(entrada);
-   }while(estado_anterior != estado); // aqui definimos um intervalo de tempo de segurança usando a função delay(), para sair do loop é
-   // necessário identificar uma constancia no estado do botão, ele precisa ser o mesmo durante 50 ms
+   do{                  //faça ... enquanto ...
+      estado_anterior = digitalRead(entrada);   //faz uma leitura digital no pino entrada e guarda em estado_anterior
+      delay(50);                                 //aguarda 50 milisegundos
+      estado = digitalRead(entrada);            // novamente faz uma leitura do pino entrada
+   }while(estado_anterior != estado);  //aqui definimos um intervalo de tempo de segurança usando a função delay()
+                                       //para sair do loop é necessário identificar uma constancia no estado do botão, ele precisa ser o mesmo durante 50 ms
    
-   if (estado==HIGH && aux==1){
-      aux = 0;
-      cont++;
-      digitalWrite(led,HIGH); // este não é só um algoritimo de verificação, quando acionamos o botão também acendemos um LED
+   if (estado==HIGH && aux==1){    //testa se estado é nível alto E aux é igual a 1
+      aux = 0;                     //grava 0 em aux
+      cont++;                      //incrementa em 1 a variável cont
+      digitalWrite(led,HIGH);      //aciona-se um LED com nível alto
    }
    
-   if (estado==LOW && aux==0){
-      aux = 1;
-      cont++;
-      digitalWrite(led,LOW);
+   if (estado==LOW && aux==0){     //testa se estado é nível baixo e aux é igual a 0
+      aux = 1;                     // grava 1 em aux
+      cont++;                      //incrementa em 1 a variável cont
+      digitalWrite(led,LOW);       //desliga o LED com nível baixo
    }
    
-      if (millis()-time>=500){     // imprime o número de variações a cada 0,5 segundo
-         time=millis();            // guarda o novo ponto de início para a próxima análise
-         Serial.print("variações = ");
-         Serial.print(cont);
-         Serial.print("\n");
-         cont = 0;
+      if (millis()-time>=500){     //imprime o número de variações a cada 0,5 segundo
+         time=millis();            //guarda o novo ponto de início para a próxima análise
+         Serial.print("variações = ");   //imprime o texto entre aspas duplcas
+         Serial.print(cont);             //imprime conteúdo da variável cont
+         Serial.print("\n");             //puxa uma linha
+         cont = 0;                       //grava 0 na variável cont
       }
    }
    ```
