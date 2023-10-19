@@ -189,6 +189,8 @@ void loop() {            //estrutura básica de qualquer arduino, chamada void l
 # Comportamento Gráfico do C
 
 
+
+
 colocar dados do ppt já pronto
 
 ## Quando fecha a chave
