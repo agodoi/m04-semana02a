@@ -365,3 +365,15 @@ Tente acionar o LED_BUILTIN no seu código-fonte e faça-o piscar a cada impress
 O objetivo desse desafio é unir a extração de dados com um indicador de saída de dados através do piscar de um LED. Ele é um **atuador** pois executa uma função de lhe informar que os dados estão saindo.
 
 Se você terminar e tiver sucesso, chame o professor na sua bancada e ganhará um prêmio!
+
+
+# Conclusões
+
+- Como o capacitor é lerdo para carregar, o bouncing da chave é cancelado. O capacitor alisa a variação do sinal provocado pela imperfeição interna dos contados da chavinha.
+
+E mais:
+
+- Você viu como o capacitor se comporta ao carregar e descarregar.
+- No desafio, tem um exemplo de atuador visual, que é o LED nativo da placa, que pisca a cada vez que o Monitor Serial imprime um novo dado.
+
+  **Provavelmente você usará isso no seu projeto do hospital** Fique atento!
