@@ -311,7 +311,7 @@ Etapas:
 
 |tempo (ms)|Tensão R|Tensão C|
 |0|5.00|0.00|
-|-|-|-|
+
 9) 
 
 
