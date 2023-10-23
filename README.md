@@ -263,7 +263,7 @@ Lista de peças:
 2) Colar o código-fonte abaixo no Arduino Uno
 3) Ligar a chavinha
 4) Capturar os dados de tensão do C e do R pelo Monitor Serial do TinkerCad
-5) Copiar e colar esses valores para o Excel
+5) Copiar e colar esses valores para o Colab
 6) Montar um gráfico
 7) Confirmar o compartamento da tensão do C e do R
 
@@ -306,7 +306,7 @@ Etapas:
 
 6) Clique em **Iniciar simulação**
    
-8) Clique no botão **Código** e na parte de baixo, clique em **Monitor Serial**. Expanda essa tela usando o seu mouse. E terá os seguintes valores:
+8) Clique no botão **Código** e na parte de baixo, clique em **Monitor Serial**. Expanda essa tela ao máximo usando o seu mouse para você visualizar o máximo de valores. E terá os seguintes valores:
 
 
 |tempo (ms)|Tensão R|Tensão C|
@@ -318,10 +318,41 @@ Etapas:
 |1607|4.26|0.74|
 |sua vez| ... | ...|
 
-9) 
+9) Simule o circuito até 9,6s, copie os dados usando o **botão direito do mouse**, o teclado não funciona.
+10) Cole no **Bloco de notas** para manter a formatação dos dados.
+11) Agora copie e cole e passe para Colab e use esse código
 
+```
+import matplotlib.pyplot as plt
 
+# Seus dados
+dados = [
+    (0, 5.00, 0.00),
+    (401, 4.80, 0.20),
+    (803, 4.61, 0.39),
+ mantenha esse formato e adicione seus dados do MONITOR SERIAL
+]
 
+# Separando os dados
+x = [item[0] for item in dados]
+y1 = [item[1] for item in dados]
+y2 = [item[2] for item in dados]
+
+# Criando o gráfico
+plt.figure(figsize=(10, 6))
+plt.plot(x, y1, label='Y1')
+plt.plot(x, y2, label='Y2')
+
+# Configurando rótulos e título
+plt.xlabel('X')
+plt.ylabel('Valores')
+plt.title('Gráfico de Dispersão')
+plt.legend()
+
+# Exibindo o gráfico
+plt.grid(True)
+plt.show()
+```
 
 ## Ambiente WokWi
 
