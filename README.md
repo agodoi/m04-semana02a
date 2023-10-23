@@ -203,6 +203,10 @@ A tensão começa em 0V e vai aumentando até o valor máximo de E que é o valo
 
 Quando você fecha a chave, acontece isso conforme a figura a seguir. O capacitor começa do 0V e vai subindo rapidamente e a corrente I dá um pico e começa cair.
 
+Como a corrente I do capacitor é igual no resistor, pois estão em série, o I do R também vai dar um pico e começar a cair.
+
+**Logo, o que acontece no C e no R em termos de corrente I, são iguais em comportamento**.
+
 Esse tempo de subida do V e do I depende da combinação dos valores entre C e R. O intervalor inteiro da curva do C é calculadora como sendo T = 1 / R*C. Esse T chama-se TAL e curva gasta sempre 5T. No 6ºT, a curva praticamente já se estabilizou.
 
 
@@ -220,7 +224,9 @@ Quando a tensão de C vai se aproximando do valor máximo E e a corrente I vai s
 
 ## Quando abre a chave
 
-Quando você abre a chavinha de pressão, ocorre o contrário: o C que está cheio começa a se descarregar e a corrente que era 0A, volta a circular lentamente até atingir seu valor máximo. Como nos interessa a análise somente da tensão V, veja o gráfico abaixo de como o C se comporta a cada vez que você pressiona a chavinha do seu projeto.
+Quando você abre a chavinha de pressão, ocorre o contrário: o C que está cheio começa a se descarregar e a corrente que era 0A, volta a circular lentamente até atingir seu valor máximo. 
+
+Como nos interessa a análise somente da tensão V no capacitor, veja o gráfico abaixo de como o C se comporta a cada vez que você pressiona a chavinha do seu projeto. Já a corrente I do capacitor, será analisada no R na parte prática, e como o comportamento de I e V são iguais no R, então, vamos analisar a tensão V também no R.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png">
@@ -239,6 +245,76 @@ Por favor, acessem o [TinkerCad](https://www.tinkercad.com/dashboard), entre com
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png">
    <img alt="Ciruico Prático TinkerCad" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png)">
 </picture>
+
+
+Lista de peças:
+
+- 01 protoboard
+- 01 Arduino Uno R3
+- 01 C de 10uF e 25V
+- 01 R de 1M ohms (marrom, preto, verde)
+- 01 R de 100 ohms (marrom, preto, marrom)
+- 01 interruptor deslizante
+- fios
+
+## Seu objetivo nessa prática será:
+
+1) Montar o circuito no [TinkerCad](https://www.tinkercad.com/dashboard) 
+2) Colar o código-fonte abaixo no Arduino Uno
+3) Ligar a chavinha
+4) Capturar os dados de tensão do C e do R pelo Monitor Serial do TinkerCad
+5) Copiar e colar esses valores para o Excel
+6) Montar um gráfico
+7) Confirmar o compartamento da tensão do C e do R
+
+```
+int pinoNoRC=0; 
+int valorLido = 0;
+float tensaoCapacitor = 0, tensaoResistor;
+unsigned long time; 
+void setup(){ 
+Serial.begin(9600); 
+} 
+void loop() { 
+	time=millis(); 
+	valorLido=analogRead(pinoNoRC); 
+	tensaoResistor=(valorLido*5.0/1023); // 5.0V / 1023 degraus = 0.0048876 
+	tensaoCapacitor = abs(5.0-tensaoResistor);
+ 	Serial.print(time); //imprime o conteúdo de time no MONITOR SERIAL
+    Serial.print(" "); 
+  	Serial.print(tensaoResistor);
+  	Serial.print(" ");
+  	Serial.println(tensaoCapacitor); 
+	delay(400); 
+}
+
+```
+Etapas:
+
+1) Abra o [TinkerCad](https://www.tinkercad.com/dashboard) e selecione a opção **Projetos** no menu vertical esquerdo, e depois clique em **Criar** e depois **Circuito**.
+   
+2) Puxe um protoboard para a área em branco de desenvolvimento.
+   
+4) Puxe um Arduino Uno R3, copie e cole o código nele.
+   
+5) Puxe os componentes e seus valores e faça as ligações eletrônicas indicadas no desenho já demonstrado. Você pude mudar as cores dos fios na barra horizontal superior.
+
+   <picture>
+      <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png">
+      <img alt="Ciruico Prático TinkerCad" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png)">
+   </picture>
+
+6) Clique em **Iniciar simulação**
+   
+8) Clique no botão **Código** e na parte de baixo, clique em **Monitor Serial**. Expanda essa tela usando o seu mouse. E terá os seguintes valores:
+
+|-|-|-|
+|tempo|Tensão R | Tensão C|
+|-|-|-|
+9) 
+
+
+
 
 ## Ambiente WokWi
 
