@@ -356,7 +356,7 @@ plt.show()
 
 12) Salve o gráfico porque você vai precisar na ponderada de hoje.
 
-## Desafio!
+# Desafio!
 
 Faça essa simulação caso você tenha terminado com folga a prática anterior.
 
