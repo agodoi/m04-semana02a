@@ -354,10 +354,15 @@ plt.grid(True)
 plt.show()
 ```
 
-## Ambiente WokWi
+12) Salve o gráfico porque você vai precisar na ponderada de hoje.
 
-Como compartilhar o projeto da forma correta?
-Como fazer simulações
+## Desafio!
+
+Faça essa simulação caso você tenha terminado com folga a prática anterior.
+
+Tente montar esse projeto no [WokWi](https://wokwi.com/) e extraia os valores da tensão do capacitor e do resistor. O código-fonte do Arduino é o mesmo do Tinkercad.
+
+Se você terminar e tiver sucesso, chame o professor na sua bancada e ganhará um prêmio!
 
 
 
