@@ -188,6 +188,14 @@ void loop() {            //estrutura básica de qualquer arduino, chamada void l
 
 # Comportamento Gráfico do C
 
+Você pode reparar que o circuito do Capacitor C está em série com o resistor R. Todo circuito antibouncing é assim: C em série com R. Logo mais, você verá uma prática disso.
+
+Quando você pressiona o botão de pressão, a tensão interna no C vai se comportar da seguinte forma:
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC.png">
+   <img alt="Carga e Descarga do C" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC.png)">
+</picture>
 
 
 
