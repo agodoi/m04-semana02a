@@ -227,16 +227,18 @@ Quando você abre a chavinha de pressão, ocorre o contrário: o C que está che
    <img alt="Carga - parte 2" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png)">
 </picture>
 
-
-
-## Atuadores
-
-
-
+**Fique atento que esse é o gabarito da prática de hoje**.
 
 # Prática com circuito RC
 
 ## Circuito TinkerCad
+
+Por favor, acessem o [TinkerCad](https://www.tinkercad.com/dashboard), entre com a sua conta Google / Estudante. Abra um novo projeto e monte o circuito a seguir:
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuito_capacitor.png">
+   <img alt="Ciruico Prático TinkerCad" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuito_capacitor.png)">
+</picture>
 
 ## Ambiente WokWi
 
