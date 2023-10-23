@@ -376,4 +376,4 @@ E mais:
 - Você viu como o capacitor se comporta ao carregar e descarregar.
 - No desafio, tem um exemplo de atuador visual, que é o LED nativo da placa, que pisca a cada vez que o Monitor Serial imprime um novo dado.
 
-  **Provavelmente você usará isso no seu projeto do hospital** Fique atento!
+  **Provavelmente você usará isso no seu projeto do hospital.** Fique atento!
