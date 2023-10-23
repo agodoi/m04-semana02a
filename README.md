@@ -236,8 +236,8 @@ Quando você abre a chavinha de pressão, ocorre o contrário: o C que está che
 Por favor, acessem o [TinkerCad](https://www.tinkercad.com/dashboard), entre com a sua conta Google / Estudante. Abra um novo projeto e monte o circuito a seguir:
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuito_capacitor.png">
-   <img alt="Ciruico Prático TinkerCad" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuito_capacitor.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png">
+   <img alt="Ciruico Prático TinkerCad" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png)">
 </picture>
 
 ## Ambiente WokWi
