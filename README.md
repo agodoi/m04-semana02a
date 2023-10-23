@@ -203,7 +203,7 @@ A tensão começa em 0V e vai aumentando até o valor máximo de E que é o valo
 
 Quando você fecha a chave, acontece isso conforme a figura a seguir. O capacitor começa do 0V e vai subindo rapidamente e a corrente I dá um pico e começa cair.
 
-Esse tempo de subida do V e do I depende da combinação dos valores entre C e R. O intervalor inteiro da curva do C é calculadora como sendo T = 1 / R*C. Esse T chama-se TAL e curva gasta sempre 5T.
+Esse tempo de subida do V e do I depende da combinação dos valores entre C e R. O intervalor inteiro da curva do C é calculadora como sendo T = 1 / R*C. Esse T chama-se TAL e curva gasta sempre 5T. No 6ºT, a curva praticamente já se estabilizou.
 
 
 <picture>
@@ -219,6 +219,15 @@ Quando a tensão de C vai se aproximando do valor máximo E e a corrente I vai s
 </picture>
 
 ## Quando abre a chave
+
+Quando você abre a chavinha de pressão, ocorre o contrário: o C que está cheio começa a se descarregar e a corrente que era 0A, volta a circular lentamente até atingir seu valor máximo.
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png">
+   <img alt="Carga - parte 2" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png)">
+</picture>
+
+https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png
 
 ## Atuadores
 
