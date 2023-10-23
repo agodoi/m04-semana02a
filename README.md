@@ -201,13 +201,21 @@ A tensão começa em 0V e vai aumentando até o valor máximo de E que é o valo
 
 ## Quando fecha a chave
 
-Quando você fecha a chave, acontece isso conforme as figuras. O capacitor começa do 0V e vai subindo rapidamente. Esse tempo de subida depende da combinação dos valores entre C e R. O intervalor inteiro da curva do C é calculadora como sendo T = 1 / R*C. Esse T chama-se TAL.
+Quando você fecha a chave, acontece isso conforme as figuras. O capacitor começa do 0V e vai subindo rapidamente. Esse tempo de subida depende da combinação dos valores entre C e R. O intervalor inteiro da curva do C é calculadora como sendo T = 1 / R*C. Esse T chama-se TAL e curva gasta sempre 5T.
+
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png">
    <img alt="Carga - parte 1" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png)">
 </picture>
 
+Quando a tensão de C vai se aproximando do valor máximo E, a curva é mais suave.
+
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte2.png">
+   <img alt="Carga - parte 2" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte2.png)">
+</picture>
 
 ## Quando abre a chave
 
