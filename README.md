@@ -309,11 +309,8 @@ Etapas:
 8) Clique no botão **Código** e na parte de baixo, clique em **Monitor Serial**. Expanda essa tela usando o seu mouse. E terá os seguintes valores:
 
 
-|tempo|Tensão R|Tensão C|
+|tempo (ms)|Tensão R|Tensão C|
 |0|5.00|0.00|
-|401|4.80|0.20|
-|803|4.61|0.39|
-|1206|4.43|0.57|
 |-|-|-|
 9) 
 
