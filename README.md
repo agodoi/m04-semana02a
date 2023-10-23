@@ -197,11 +197,18 @@ Quando você pressiona o botão de pressão, a tensão interna no C vai se compo
    <img alt="Carga e Descarga do C" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC.png)">
 </picture>
 
-
-
-colocar dados do ppt já pronto
+A tensão começa em 0V e vai aumentando até o valor máximo de E que é o valor de VCC (VCC é o valor da tensão que o circuito trabalha). Por exemplo, se uma malha trabalhar com 3,3V, o capacitor vai carregar até 3,3V. Se a malha trabalha com 5V, vai carregar até 5V. Uma malha é o circuito fechado em que se encontra o capacitor C.
 
 ## Quando fecha a chave
+
+Quando você fecha a chave, acontece isso conforme as figuras. O capacitor começa do 0V e vai subindo... mas isso ocorre em milisegundos ou nanosegundos.
+
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png">
+   <img alt="Carga - parte 1" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png)">
+</picture>
+
 
 ## Quando abre a chave
 
