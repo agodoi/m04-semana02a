@@ -273,7 +273,7 @@ int valorLido = 0;
 float tensaoCapacitor = 0, tensaoResistor;
 unsigned long time; 
 void setup(){ 
-Serial.begin(9600); 
+	Serial.begin(9600); 
 } 
 void loop() { 
 	time=millis(); 
@@ -281,7 +281,7 @@ void loop() {
 	tensaoResistor=(valorLido*5.0/1023); // 5.0V / 1023 degraus = 0.0048876 
 	tensaoCapacitor = abs(5.0-tensaoResistor);
  	Serial.print(time); //imprime o conteúdo de time no MONITOR SERIAL
-    Serial.print(" "); 
+    	Serial.print(" "); 
   	Serial.print(tensaoResistor);
   	Serial.print(" ");
   	Serial.println(tensaoCapacitor); 
@@ -360,9 +360,8 @@ plt.show()
 
 Faça essa simulação caso você tenha terminado com folga a prática anterior.
 
-Tente montar esse projeto no [WokWi](https://wokwi.com/) e extraia os valores da tensão do capacitor e do resistor. O código-fonte do Arduino é o mesmo do Tinkercad.
+Tente acionar o LED_BUILTIN no seu código-fonte e faça-o piscar a cada impressão de dados no MONITOR SERIAL. O LED_BUILTIN é nativo da placa Arduino. Ele pisca em verde na própria placa Arduino IDE. Não são todas as placas que possuem LED nativo. Por exemplo, o ESP32 que você vai usar no lab não tem. Nesse caso, teria que adicionar um LED com resistor R em série (use 180 ohms).
+
+O objetivo desse desafio é unir a extração de dados com um indicador de saída de dados através do piscar de um LED. Ele é um **atuador** pois executa uma função de lhe informar que os dados estão saindo.
 
 Se você terminar e tiver sucesso, chame o professor na sua bancada e ganhará um prêmio!
-
-
-
