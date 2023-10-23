@@ -201,8 +201,7 @@ A tensão começa em 0V e vai aumentando até o valor máximo de E que é o valo
 
 ## Quando fecha a chave
 
-Quando você fecha a chave, acontece isso conforme as figuras. O capacitor começa do 0V e vai subindo... mas isso ocorre em milisegundos ou nanosegundos.
-
+Quando você fecha a chave, acontece isso conforme as figuras. O capacitor começa do 0V e vai subindo rapidamente. Esse tempo de subida depende da combinação dos valores entre C e R. O intervalor inteiro da curva do C é calculadora como sendo T = 1 / R*C. Esse T chama-se TAL.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png">
