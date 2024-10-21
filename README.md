@@ -18,11 +18,8 @@ O relatório deve ser produzido em sala e entregue ao professor no final da inst
 
 Para resolver 2 problemas:
 
+
 ### **1)** Uso de botões para seleção de menus
-
-### **2)** Proteção de sensores de corrente ACS712
-
-
 
 Por exemplo, pressione botão A para mover as opções do menu, pressione B para selecionar uma opção do menu, etc.
 
@@ -30,6 +27,12 @@ Por exemplo, pressione botão A para mover as opções do menu, pressione B para
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png">
    <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png)">
 </picture>
+
+
+### **2)** Proteção de sensores de corrente ACS712
+
+![ACS712](https://github.com/agodoi/m04-semana02a/blob/main/imgs/asc712.png)
+
 
 E ao pressionar o botão, microscopicamente há várias pressionadas devido às imperfeições das chapinhas metálicas de contatos internos, gerando o sinal que se nota na imagem a seguir.
 
