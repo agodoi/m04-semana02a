@@ -31,7 +31,7 @@ Por exemplo, pressione botão A para mover as opções do menu, pressione B para
 
 ### **2)** Proteção de sensores de corrente ACS712
 
-![ACS712](https://github.com/agodoi/m04-semana02a/blob/main/imgs/asc712.png)
+![ACS712](https://github.com/agodoi/m04-semana02a/blob/main/imgs/sensor_asc712.png)
 
 
 E ao pressionar o botão, microscopicamente há várias pressionadas devido às imperfeições das chapinhas metálicas de contatos internos, gerando o sinal que se nota na imagem a seguir.
