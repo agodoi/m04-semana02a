@@ -1,3 +1,8 @@
+# Atendimento do Professor
+
+## Terças e quintas. Professor de horário parcial. Nesses 2 dias, podem contar comigo!
+
+
 # Sensores e Atuadores Básicos
 
 ## Objetivos
@@ -9,18 +14,13 @@ Os alunos devem realizar a coleta de dados de um experimento montado pelo profes
 O relatório deve ser produzido em sala e entregue ao professor no final da instrução.
 
 
-# Atendimento do Professor
-
-## Terças e quintas. Professor de horário parcial. Nesses 2 dias, podem contar comigo!
-
-
 ## Vantagens dessa instrução para o seu projeto
 
 Para resolver 2 problemas:
 
-**1)** Uso de botões para seleção de menus
+### **1)** Uso de botões para seleção de menus
 
-**2)** Proteção de sensores de corrente ACS712
+### **2)** Proteção de sensores de corrente ACS712
 
 
 
