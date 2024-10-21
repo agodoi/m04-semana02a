@@ -14,12 +14,10 @@ Os alunos devem realizar a coleta de dados de um experimento montado pelo profes
 O relatório deve ser produzido em sala e entregue ao professor no final da instrução.
 
 
-## Vantagens dessa instrução para o seu projeto
-
-Para resolver 2 problemas:
+## Vantagens dessa instrução para o seu projeto é resolver 2 problemas
 
 
-### **1)** Uso de botões para seleção de menus
+### Problema (1): Uso de botões para seleção de menus
 
 Por exemplo, pressione botão A para mover as opções do menu, pressione B para selecionar uma opção do menu, etc.
 
@@ -29,12 +27,14 @@ Por exemplo, pressione botão A para mover as opções do menu, pressione B para
 </picture>
 
 
-### **2)** Proteção de sensores de corrente ACS712
+### Problema (2): Proteção de sensores ACS712 contra picos de corrente elétrica
 
 ![ACS712](https://github.com/agodoi/m04-semana02a/blob/main/imgs/sensor_asc712.png)
 
 
-E ao pressionar o botão, microscopicamente há várias pressionadas devido às imperfeições das chapinhas metálicas de contatos internos, gerando o sinal que se nota na imagem a seguir.
+## Resolvendo o Problema (1)
+
+Ao pressionar o botão, microscopicamente há várias pressionadas devido às imperfeições das chapinhas metálicas de contatos internos, gerando o sinal que se nota na imagem a seguir.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing.png">
@@ -93,7 +93,7 @@ O capacitor possui basicamente 2 aplicações:
 1) Filtragem de sinais alternados ou pulsantes.
 2) Armazenamento de cargas elétricas.
  
-## Voltando ao seu projeto novamente
+### Voltando ao seu projeto novamente
 
 Recomenda-se adotar a aplicação (1) no seu projeto para o seu código-fonte ser mais simples e ao mesmo tempo, contornar o efeito indesejado do bouncing. 
 
@@ -102,7 +102,7 @@ A aplicação (2) pode ser uma alternativa quando você deseja simplificar seu h
 Hoje veremos as duas aplicações.
 
 
-# Anti-bouncing usando Hardware
+### Anti-bouncing usando Hardware
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/anti_boucing.png">
@@ -145,7 +145,7 @@ void loop() {
 }
 ```
 
-# Anti-bouncing usando Software
+### Anti-bouncing usando Software
 
 ```
 int led = 4;          //declara a variável led igual a 4
@@ -193,7 +193,7 @@ void loop() {            //estrutura básica de qualquer arduino, chamada void l
    }
    ```
 
-# Comportamento Gráfico do C
+### Comportamento Gráfico do C
 
 Você pode reparar que o circuito do Capacitor C está em série com o resistor R. Todo circuito antibouncing é assim: C em série com R. Logo mais, você verá uma prática disso.
 
@@ -206,7 +206,7 @@ Quando você pressiona o botão de pressão, a tensão interna no C vai se compo
 
 A tensão começa em 0V e vai aumentando até o valor máximo de E que é o valor de VCC (VCC é o valor da tensão que o circuito trabalha). Por exemplo, se uma malha trabalhar com 3,3V, o capacitor vai carregar até 3,3V. Se a malha trabalha com 5V, vai carregar até 5V. Uma malha é o circuito fechado em que se encontra o capacitor C.
 
-## Quando fecha a chave
+### Quando fecha a chave
 
 Quando você fecha a chave, acontece isso conforme a figura a seguir. O capacitor começa do 0V e vai subindo rapidamente e a corrente I dá um pico e começa cair.
 
@@ -229,7 +229,7 @@ Quando a tensão de C vai se aproximando do valor máximo E e a corrente I vai s
    <img alt="Carga - parte 2" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte2.png)">
 </picture>
 
-## Quando abre a chave
+### Quando abre a chave
 
 Quando você abre a chavinha de pressão, ocorre o contrário: o C que está cheio começa a se descarregar e a corrente que era 0A, volta a circular lentamente até atingir seu valor máximo. 
 
@@ -241,6 +241,46 @@ Como nos interessa a análise somente da tensão V no capacitor, veja o gráfico
 </picture>
 
 **Fique atento que esse é o gabarito da prática de hoje**.
+
+---
+
+## Resolvendo o Problema (2)
+
+Para proteger o sensor ACS712 de correntes de pico utilizando um circuito RC, você pode implementar um **filtro passa-baixa** para suavizar os picos rápidos de corrente que podem danificar o sensor ou gerar leituras incorretas. Aqui está como esse filtro RC pode ser configurado:
+
+### Como o filtro RC ajuda:
+O **filtro passa-baixa** atenua as variações rápidas na corrente, permitindo apenas que as mudanças lentas (variações de corrente reais e relevantes) passem para o sensor ACS712. Isso evita que transientes curtos ou picos de corrente causem danos ao sensor ou interfiram nas medições.
+
+### Como implementar o circuito RC para proteção:
+
+#### 1. **Escolha dos componentes**:
+   - **Resistor (R)**: O valor do resistor determina a atenuação do sinal de corrente. Geralmente, para um filtro passa-baixa, um resistor entre 1 kΩ e 10 kΩ pode ser usado, dependendo do tipo de proteção desejada.
+   - **Capacitor (C)**: O capacitor age como um armazenamento temporário de carga, suavizando o sinal de corrente. Capacitores entre 0.1 µF e 10 µF são comumente usados em filtros passa-baixa.
+
+#### 2. **Frequência de corte do filtro**:
+   A frequência de corte (\(f_c\)) é o ponto em que o filtro começa a atenuar sinais de alta frequência (picos rápidos de corrente). Ela pode ser calculada usando a fórmula:
+   \[
+   f_c = \frac{1}{2 \pi R C}
+   \]
+   Onde:
+   - \(R\) é o valor do resistor.
+   - \(C\) é o valor do capacitor.
+
+   Por exemplo, para proteger o ACS712 de picos de corrente muito rápidos (como aqueles que ocorrem quando um motor é ligado ou desligado), uma frequência de corte na faixa de 10 Hz a 100 Hz pode ser apropriada.
+
+#### 3. **Montagem do filtro RC**:
+   - Coloque o resistor em **série** com a linha de sinal do ACS712.
+   - Conecte o capacitor em **paralelo** entre a saída do resistor e o terra.
+   
+   Esse circuito suavizará picos rápidos na corrente antes que o sinal chegue ao ACS712, garantindo que o sensor receba um sinal mais estável e filtrado.
+
+#### 4. **Benefícios**:
+   - **Proteção contra transientes**: Os picos de corrente resultantes de eventos rápidos como ligar ou desligar motores ou variações bruscas de carga serão atenuados pelo circuito RC, reduzindo a chance de danos ao ACS712.
+   - **Leituras mais estáveis**: O filtro elimina ruídos de alta frequência, proporcionando leituras de corrente mais precisas e confiáveis.
+
+Essa abordagem aumenta a segurança do ACS712 contra correntes de pico e preserva sua vida útil, garantindo medições mais consistentes e seguras no seu sistema IoT.
+
+---
 
 # Prática com circuito RC
 
