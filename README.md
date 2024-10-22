@@ -369,7 +369,7 @@ Etapas:
 |sua vez| ... | ...|
 
 9) Simule o circuito até 9,6s, copie os dados usando o **botão direito do mouse**, o teclado não funciona.
-10) Cole no **Bloco de notas** para manter a formatação dos dados.
+10) O Monitor Serial separa os valores usando **;**. Tem que substituir por **,**. Então, cole no **Bloco de notas** e faça a substituição.
 11) Agora copie e cole e passe para Colab e use esse código
 
 ```
