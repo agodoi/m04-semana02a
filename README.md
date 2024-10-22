@@ -259,15 +259,15 @@ O **filtro passa-baixa** atenua as variações rápidas na corrente, permitindo 
    - **Capacitor (C)**: O capacitor age como um armazenamento temporário de carga, suavizando o sinal de corrente. Capacitores entre 0.1 µF e 10 µF são comumente usados em filtros passa-baixa.
 
 #### 2. **Frequência de corte do filtro**:
-   A frequência de corte (\(f_c\)) é o ponto em que o filtro começa a atenuar sinais de alta frequência (picos rápidos de corrente). Ela pode ser calculada usando a fórmula:
+   A frequência de corte $$(\(f_c\))$$ é o ponto em que o filtro começa a atenuar sinais de alta frequência (picos rápidos de corrente). Ela pode ser calculada usando a fórmula:
    
    $$
    f_c = \frac{1}{2 \pi R C}
    $$
    
    Onde:
-   - \(R\) é o valor do resistor.
-   - \(C\) é o valor do capacitor.
+   - $$(R)$$ é o valor do resistor.
+   - $$(C)$$ é o valor do capacitor.
 
    Por exemplo, para proteger o ACS712 de picos de corrente muito rápidos (como aqueles que ocorrem quando um motor é ligado ou desligado), uma frequência de corte na faixa de 10 Hz a 100 Hz pode ser apropriada.
 
