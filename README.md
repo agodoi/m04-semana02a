@@ -410,7 +410,7 @@ plt.show()
 
 Faça essa simulação caso você tenha terminado com folga a prática anterior.
 
-Tente acionar o LED_BUILTIN no seu código-fonte e faça-o piscar a cada impressão de dados no MONITOR SERIAL. O LED_BUILTIN é nativo da placa Arduino. Ele pisca em verde na própria placa Arduino IDE. Não são todas as placas que possuem LED nativo. Por exemplo, o ESP32 que você vai usar no lab não tem. Nesse caso, teria que adicionar um LED com resistor R em série (use 180 ohms).
+Tente acionar o LED_BUILTIN no seu código-fonte e faça-o piscar a cada impressão de dados no MONITOR SERIAL. O LED_BUILTIN é nativo da placa Arduino. Ele pisca em verde na própria placa Arduino IDE. 
 
 O objetivo desse desafio é unir a extração de dados com um indicador de saída de dados através do piscar de um LED. Ele é um **atuador** pois executa uma função de lhe informar que os dados estão saindo.
 
