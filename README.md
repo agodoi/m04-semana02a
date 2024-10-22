@@ -56,9 +56,9 @@ O prejuízo é que o seu programa vai assumir que você pressionou mais de uma v
 
 ### Pergunta: Como evitar esse problema? Por meio de 2 formas.
 
-### (1) Usando hardware, por meio de um componente eletrônico chamado Capacitor
+#### (1) Usando hardware, por meio de um componente eletrônico chamado Capacitor
 
-### (2) Usando software, por meio de uma rotina usando a função ```milis()```
+#### (2) Usando software, por meio de uma rotina usando a função ```milis()```
 
 ---
 
