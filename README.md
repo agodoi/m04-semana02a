@@ -260,9 +260,11 @@ O **filtro passa-baixa** atenua as variações rápidas na corrente, permitindo 
 
 #### 2. **Frequência de corte do filtro**:
    A frequência de corte (\(f_c\)) é o ponto em que o filtro começa a atenuar sinais de alta frequência (picos rápidos de corrente). Ela pode ser calculada usando a fórmula:
+   
    \[
    f_c = \frac{1}{2 \pi R C}
    \]
+   
    Onde:
    - \(R\) é o valor do resistor.
    - \(C\) é o valor do capacitor.
