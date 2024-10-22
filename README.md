@@ -169,7 +169,8 @@ void loop() {            //estrutura básica de qualquer arduino, chamada void l
       delay(50);                                 //aguarda 50 milisegundos
       estado = digitalRead(entrada);            // novamente faz uma leitura do pino entrada
    }while(estado_anterior != estado);  //aqui definimos um intervalo de tempo de segurança usando a função delay()
-                                       //para sair do loop é necessário identificar uma constancia no estado do botão, ele precisa ser o mesmo durante 50 ms
+                                       //para sair do loop é necessário identificar uma constancia no estado do botão,
+                                       //ele precisa ser o mesmo durante 50 ms
    
    if (estado==HIGH && aux==1){    //testa se estado é nível alto E aux é igual a 1
       aux = 0;                     //grava 0 em aux
