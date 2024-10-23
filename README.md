@@ -3,7 +3,7 @@
 ## Terças e quintas. Professor de horário parcial. Nesses 2 dias, podem contar comigo!
 
 
-# Sensores e Atuadores Básicos
+# Semana 02A - Sensores e Atuadores Básicos
 
 ## Objetivos
 
