@@ -245,19 +245,20 @@ Como nos interessa a análise somente da tensão V no capacitor, veja o gráfico
 
 ---
 
-## Resolvendo o Problema (2)
+## Resolvendo o Problema do Parceiro
 
-Para proteger o sensor ACS712 de correntes de pico utilizando um circuito RC, você pode implementar um **filtro passa-baixa** para suavizar os picos rápidos de corrente que podem danificar o sensor ou gerar leituras incorretas. Aqui está como esse filtro RC pode ser configurado:
+A coleta de informações do sensor piezoelétrico frequentemente vem acompanhada de ruídos elétricos e vibrações indesejadas, que podem gerar leituras instáveis e falsas detecções. Para minimizar esse ruído e garantir que apenas os sinais mecânicos relevantes sejam capturados, é possível utilizar um circuito RC (resistor-capacitor) configurado como filtro passa-baixa.
 
 ### Como o filtro RC ajuda:
-O **filtro passa-baixa** atenua as variações rápidas na corrente, permitindo apenas que as mudanças lentas (variações de corrente reais e relevantes) passem para o sensor ACS712. Isso evita que transientes curtos ou picos de corrente causem danos ao sensor ou interfiram nas medições.
 
-### Como implementar o circuito RC para proteção:
+O filtro passa-baixa atua atenuando as variações rápidas de tensão produzidas por interferências elétricas ou impactos de alta frequência, permitindo que apenas os sinais lentos e reais — relacionados às vibrações significativas — passem para o microcontrolador (como o ESP32). Dessa forma, o circuito reduz ruídos espúrios e melhora a estabilidade e precisão das leituras do sensor piezoelétrico.
+
+### Como implementar o circuito RC para filtragem do sinal piezoelétrico:
 
 #### 1. **Escolha dos componentes**:
-   - **Resistor (R)**: O valor do resistor determina a atenuação do sinal de corrente. Geralmente, para um filtro passa-baixa, um resistor entre 1 kΩ e 10 kΩ pode ser usado, dependendo do tipo de proteção desejada.
-   - **Capacitor (C)**: O capacitor age como um armazenamento temporário de carga, suavizando o sinal de corrente. Capacitores entre 0.1 µF e 10 µF são comumente usados em filtros passa-baixa.
-
+   - **Resistor (R)**: O valor do resistor controla o quanto o sinal será amortecido. Normalmente, valores entre 100 kΩ e 1 MΩ são usados para sensores piezoelétricos, pois ajudam a limitar a corrente sem afetar significativamente o sinal útil.
+   - **Capacitor (C)**: O capacitor é conectado em paralelo com a entrada analógica e serve para armazenar pequenas variações de carga, suavizando as flutuações. Capacitores entre 0,01 µF e 0,1 µF costumam ser adequados.
+   
 #### 2. **Frequência de corte do filtro**:
    A frequência de corte $$(\(f_c\))$$ é o ponto em que o filtro começa a atenuar sinais de alta frequência (picos rápidos de corrente). Ela pode ser calculada usando a fórmula:
    
@@ -276,6 +277,10 @@ O **filtro passa-baixa** atenua as variações rápidas na corrente, permitindo 
    - Conecte o capacitor em **paralelo** entre a saída do resistor e o terra.
    
    Esse circuito suavizará picos rápidos na corrente antes que o sinal chegue ao ACS712, garantindo que o sensor receba um sinal mais estável e filtrado.
+
+   
+<img src="https://docs.aws.amazon.com/pt_br/AmazonRDS/latest/UserGuide/images/Con-AZ-Local.png" width="600">
+
 
 #### 4. **Benefícios**:
    - **Proteção contra transientes**: Os picos de corrente resultantes de eventos rápidos como ligar ou desligar motores ou variações bruscas de carga serão atenuados pelo circuito RC, reduzindo a chance de danos ao ACS712.
