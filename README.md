@@ -239,7 +239,8 @@ O filtro passa-baixa atua atenuando as variações rápidas de tensão produzida
    - $$(R)$$ é o valor do resistor.
    - $$(C)$$ é o valor do capacitor.
 
-	Por exemplo, para minimizar os ruídos de alta frequência gerados pelo sensor piezoelétrico (como vibrações rápidas e interferências elétricas indesejadas), uma frequência de corte na faixa de 50 Hz a 200 Hz pode ser apropriada, permitindo que apenas as variações mais lentas e significativas de vibração sejam detectadas.
+
+Por exemplo, para minimizar os ruídos de alta frequência gerados pelo sensor piezoelétrico (como vibrações rápidas e interferências elétricas indesejadas), uma frequência de corte na faixa de 50 Hz a 200 Hz pode ser apropriada, permitindo que apenas as variações mais lentas e significativas de vibração sejam detectadas.
 
 #### 3. **Montagem do filtro RC**:
    - Coloque o resistor em **série** com a linha de sinal do módulo do Piezo.
