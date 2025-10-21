@@ -251,13 +251,6 @@ Por exemplo, para minimizar os ruídos de alta frequência gerados pelo sensor p
    
 <img src="https://github.com/agodoi/m04-semana02a/blob/main/imgs/circuito%20RC%20com%20piezo.png" width="400">
 
-
-#### 4. **Benefícios**:
-   - **Proteção contra transientes**: Os picos de corrente resultantes de eventos rápidos como ligar ou desligar motores ou variações bruscas de carga serão atenuados pelo circuito RC, reduzindo a chance de danos ao ACS712.
-   - **Leituras mais estáveis**: O filtro elimina ruídos de alta frequência, proporcionando leituras de corrente mais precisas e confiáveis.
-
-Essa abordagem aumenta a segurança do ACS712 contra correntes de pico e preserva sua vida útil, garantindo medições mais consistentes e seguras no seu sistema IoT.
-
 ---
 
 # Prática com circuito RC
