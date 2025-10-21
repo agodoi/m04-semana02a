@@ -57,11 +57,11 @@ O capacitor é um componente eletrônico bem antigo e super importante. A funç�
 
 A figura a seguir mostra a carinha do capacitor.
 
-<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png" width="500">
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png" width="400">
 
 O capacitor possui 2 placas internas condutoras e separadas por um **dielétrico**, conforme mostra a figura a seguir.
 
-<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg" width="500">
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg" width="400">
 
 Um **dielétrico** é um material isolante. Mas devido à alta quantidade de cargas numa mesma área, esse material isolante não segura a pressão das cargas, e o resultado é a fluidez de tais cargas. Esse fluxo de cargas dá-se o nome de **corrente elétrica**.
 
