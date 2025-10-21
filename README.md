@@ -397,3 +397,5 @@ E mais:
 Durante a prática com o circuito RC, observou-se que a tensão no capacitor sobe e desce de forma suave, enquanto o resistor exibe uma variação complementar. Explique, com base no comportamento observado no gráfico e nos conceitos de tempo de carga e descarga, por que o circuito RC é capaz de eliminar os repiques (bouncing) de um botão e, ao mesmo tempo, filtrar ruídos vindos de sensores piezoelétricos.
 
 E ainda, em sua resposta, relacione o papel físico do capacitor e do resistor com a ideia de frequência de corte e suavização do sinal.
+
+## [Link de entrega](https://docs.google.com/forms/d/1a5iC2O0NT94Br6WpT4LiGdTXJnMiCs6tRjZCtn6-mTw/preview)
