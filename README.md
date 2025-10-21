@@ -220,7 +220,7 @@ A coleta de informações do sensor piezoelétrico frequentemente vem acompanhad
 
 ### Como o filtro RC ajuda:
 
-O filtro passa-baixa atua atenuando as variações rápidas de tensão produzidas por interferências elétricas ou impactos de alta frequência, permitindo que apenas os sinais lentos e reais — relacionados às vibrações significativas — passem para o microcontrolador (como o ESP32). Dessa forma, o circuito reduz ruídos espúrios e melhora a estabilidade e precisão das leituras do sensor piezoelétrico.
+O filtro passa-baixa atua atenuando as variações rápidas de tensão produzidas por interferências elétricas ou impactos de alta frequência, permitindo que apenas os sinais lentos e reais - relacionados às vibrações significativas - passem para o microcontrolador (como o ESP32). Dessa forma, o circuito reduz ruídos espúrios e melhora a estabilidade e precisão das leituras do sensor piezoelétrico.
 
 ### Como implementar o circuito RC para filtragem do sinal piezoelétrico:
 
