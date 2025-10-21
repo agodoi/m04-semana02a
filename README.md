@@ -279,7 +279,7 @@ O filtro passa-baixa atua atenuando as variações rápidas de tensão produzida
    Esse circuito suavizará picos rápidos na corrente antes que o sinal chegue ao ACS712, garantindo que o sensor receba um sinal mais estável e filtrado.
 
    
-<img src="https://docs.aws.amazon.com/pt_br/AmazonRDS/latest/UserGuide/images/Con-AZ-Local.png" width="600">
+<img src="https://github.com/agodoi/m04-semana02a/blob/main/imgs/circuito%20RC%20com%20piezo.png" width="600">
 
 
 #### 4. **Benefícios**:
