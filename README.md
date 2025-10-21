@@ -88,7 +88,7 @@ Hoje veremos as duas aplicações.
 ### Anti-bouncing usando Hardware
 
 
-<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/anti_boucing.png" width="500">
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/anti_boucing.png" width="300">
 
 ```
 unsigned long time; // váriavel para receber valores da função milli()
