@@ -25,7 +25,7 @@ Por exemplo, pressione botão A para mover as opções do menu, pressione B para
 
 ### Problema (2): Filtro para sensor Piezoelétrico
 
-![ACS712](https://github.com/agodoi/m04-semana02a/blob/main/imgs/sensor_asc712.png)
+<img src="https://github.com/agodoi/m04-semana02a/blob/main/imgs/Piezo.png" width="500">
 
 
 ## Resolvendo o Problema (1)
