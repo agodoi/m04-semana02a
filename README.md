@@ -390,3 +390,10 @@ E mais:
 - No desafio, tem um exemplo de atuador visual, que é o LED nativo da placa, que pisca a cada vez que o Monitor Serial imprime um novo dado.
 - Você viu como resolver o bouncing usando hardware
 - E existe a opção de resolver por meio de software contornando o tempo de pressionamento do botão. Mas isso pode causar travas no seu programa ou torná-lo complexo
+
+
+# Ponderada
+
+Durante a prática com o circuito RC, observou-se que a tensão no capacitor sobe e desce de forma suave, enquanto o resistor exibe uma variação complementar. Explique, com base no comportamento observado no gráfico e nos conceitos de tempo de carga e descarga, por que o circuito RC é capaz de eliminar os repiques (bouncing) de um botão e, ao mesmo tempo, filtrar ruídos vindos de sensores piezoelétricos.
+
+E ainda, em sua resposta, relacione o papel físico do capacitor e do resistor com a ideia de frequência de corte e suavização do sinal.
