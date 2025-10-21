@@ -315,12 +315,7 @@ Etapas:
    
 4) Puxe um Arduino Uno R3, copie e cole o código nele.
    
-5) Puxe os componentes e seus valores e faça as ligações eletrônicas indicadas no desenho já demonstrado. Você pude mudar as cores dos fios na barra horizontal superior.
-
-   <picture>
-      <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png">
-      <img alt="Ciruico Prático TinkerCad" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png)">
-   </picture>
+5) Puxe os componentes e seus valores e faça as ligações eletrônicas indicadas no desenho mostrado acima. Você pude mudar as cores dos fios na barra horizontal superior.
 
 6) Clique em **Iniciar simulação**
    
