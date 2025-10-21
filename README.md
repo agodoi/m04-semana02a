@@ -214,7 +214,7 @@ Como nos interessa a análise somente da tensão V no capacitor, veja o gráfico
 
 ---
 
-## Resolvendo o Problema do Parceiro
+## Resolvendo o Problema (2) Sensor Piezoelétrico
 
 A coleta de informações do sensor piezoelétrico frequentemente vem acompanhada de ruídos elétricos e vibrações indesejadas, que podem gerar leituras instáveis e falsas detecções. Para minimizar esse ruído e garantir que apenas os sinais mecânicos relevantes sejam capturados, é possível utilizar um circuito RC (resistor-capacitor) configurado como filtro passa-baixa.
 
@@ -239,10 +239,10 @@ O filtro passa-baixa atua atenuando as variações rápidas de tensão produzida
    - $$(R)$$ é o valor do resistor.
    - $$(C)$$ é o valor do capacitor.
 
-   Por exemplo, para proteger o ACS712 de picos de corrente muito rápidos (como aqueles que ocorrem quando um motor é ligado ou desligado), uma frequência de corte na faixa de 10 Hz a 100 Hz pode ser apropriada.
+	Por exemplo, para minimizar os ruídos de alta frequência gerados pelo sensor piezoelétrico (como vibrações rápidas e interferências elétricas indesejadas), uma frequência de corte na faixa de 50 Hz a 200 Hz pode ser apropriada, permitindo que apenas as variações mais lentas e significativas de vibração sejam detectadas.
 
 #### 3. **Montagem do filtro RC**:
-   - Coloque o resistor em **série** com a linha de sinal do ACS712.
+   - Coloque o resistor em **série** com a linha de sinal do módulo do Piezo.
    - Conecte o capacitor em **paralelo** entre a saída do resistor e o terra.
    
    Esse circuito suavizará picos rápidos na corrente antes que o sinal chegue ao ACS712, garantindo que o sensor receba um sinal mais estável e filtrado.
