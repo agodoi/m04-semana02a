@@ -21,9 +21,9 @@ O relatório deve ser produzido em sala e entregue ao professor no final da inst
 
 Por exemplo, pressione botão A para mover as opções do menu, pressione B para selecionar uma opção do menu, etc.
 
-<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png" width="300">
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png" width="500">
 
-### Problema (2): Proteção de sensores ACS712 contra picos de corrente elétrica
+### Problema (2): Filtro para sensor Piezoelétrico
 
 ![ACS712](https://github.com/agodoi/m04-semana02a/blob/main/imgs/sensor_asc712.png)
 
