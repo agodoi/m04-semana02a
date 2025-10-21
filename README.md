@@ -21,11 +21,7 @@ O relatório deve ser produzido em sala e entregue ao professor no final da inst
 
 Por exemplo, pressione botão A para mover as opções do menu, pressione B para selecionar uma opção do menu, etc.
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png">
-   <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png)">
-</picture>
-
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png" width="500">
 
 ### Problema (2): Proteção de sensores ACS712 contra picos de corrente elétrica
 
@@ -36,10 +32,7 @@ Por exemplo, pressione botão A para mover as opções do menu, pressione B para
 
 Ao pressionar o botão, microscopicamente há várias pressionadas devido às imperfeições das chapinhas metálicas de contatos internos, gerando o sinal que se nota na imagem a seguir.
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing.png">
-   <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing.png)">
-</picture>
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing.png" width="500">
 
 **ESSE EFEITO CHAMA-SE BOUNCING (REPIQUE)**
 
@@ -48,11 +41,7 @@ Nota-se que o **nível alto** do sinal foi gerado mais de uma vez, e isso confun
 
 O prejuízo é que o seu programa vai assumir que você pressionou mais de uma vez e vai avançar o processo sem você querer. Veja a imagem a seguir que mostra, através de uma tela de um osciloscópio, o comportamento de um botão sendo pressionado com bouncing.
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing_oscilas.png">
-   <img alt="Bouncing Osciloscópio" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing_oscilas.png)">
-</picture>
-
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/boucing_oscilas.png" width="500">
 
 ### Pergunta: Como evitar esse problema? Por meio de 2 formas.
 
@@ -68,17 +57,11 @@ O capacitor é um componente eletrônico bem antigo e super importante. A funç�
 
 A figura a seguir mostra a carinha do capacitor.
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png">
-   <img alt="Capacitores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png)">
-</picture>
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores.png" width="500">
 
 O capacitor possui 2 placas internas condutoras e separadas por um **dielétrico**, conforme mostra a figura a seguir.
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg">
-   <img alt="Capacitor Interno" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg)">
-</picture>
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/capacitores_interna.jpg" width="500">
 
 Um **dielétrico** é um material isolante. Mas devido à alta quantidade de cargas numa mesma área, esse material isolante não segura a pressão das cargas, e o resultado é a fluidez de tais cargas. Esse fluxo de cargas dá-se o nome de **corrente elétrica**.
 
@@ -104,11 +87,8 @@ Hoje veremos as duas aplicações.
 
 ### Anti-bouncing usando Hardware
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/anti_boucing.png">
-   <img alt="Anti Bouncing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/anti_boucing.png)">
-</picture>
 
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/anti_boucing.png" width="500">
 
 ```
 unsigned long time; // váriavel para receber valores da função milli()
@@ -200,10 +180,7 @@ Você pode reparar que o circuito do Capacitor C está em série com o resistor 
 
 Quando você pressiona o botão de pressão, a tensão interna no C vai se comportar da seguinte forma:
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC.png">
-   <img alt="Carga e Descarga do C" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC.png)">
-</picture>
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC.png" width="500">
 
 A tensão começa em 0V e vai aumentando até o valor máximo de E que é o valor de VCC (VCC é o valor da tensão que o circuito trabalha). Por exemplo, se uma malha trabalhar com 3,3V, o capacitor vai carregar até 3,3V. Se a malha trabalha com 5V, vai carregar até 5V. Uma malha é o circuito fechado em que se encontra o capacitor C.
 
@@ -217,18 +194,12 @@ Como a corrente I do capacitor é igual no resistor, pois estão em série, o I 
 
 Esse tempo de subida do V e do I depende da combinação dos valores entre C e R. O intervalor inteiro da curva do C é calculadora como sendo T = 1 / R*C. Esse T chama-se TAL e curva gasta sempre 5T. No 6ºT, a curva praticamente já se estabilizou.
 
-
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png">
-   <img alt="Carga - parte 1" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png)">
-</picture>
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png" width="500">
 
 Quando a tensão de C vai se aproximando do valor máximo E e a corrente I vai se aproximando do mínimo 0A, a curva se torna mais suave.
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte2.png">
-   <img alt="Carga - parte 2" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte2.png)">
-</picture>
+
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte2.png" width="500">
 
 ### Quando abre a chave
 
@@ -237,7 +208,7 @@ Quando você abre a chavinha de pressão, ocorre o contrário: o C que está che
 Como nos interessa a análise somente da tensão V no capacitor, veja o gráfico abaixo de como o C se comporta a cada vez que você pressiona a chavinha do seu projeto. Já a corrente I do capacitor, será analisada no R na parte prática, e como o comportamento de I e V são iguais no R, então, vamos analisar a tensão V também no R.
 
 
-<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png" width="400">
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png" width="500">
 
 **Fique atento que esse é o gabarito da prática de hoje**.
 
