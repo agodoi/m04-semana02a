@@ -236,10 +236,8 @@ Quando você abre a chavinha de pressão, ocorre o contrário: o C que está che
 
 Como nos interessa a análise somente da tensão V no capacitor, veja o gráfico abaixo de como o C se comporta a cada vez que você pressiona a chavinha do seu projeto. Já a corrente I do capacitor, será analisada no R na parte prática, e como o comportamento de I e V são iguais no R, então, vamos analisar a tensão V também no R.
 
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png">
-   <img alt="Carga - parte 2" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png)">
-</picture>
+
+<img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png" width="400">
 
 **Fique atento que esse é o gabarito da prática de hoje**.
 
@@ -279,7 +277,7 @@ O filtro passa-baixa atua atenuando as variações rápidas de tensão produzida
    Esse circuito suavizará picos rápidos na corrente antes que o sinal chegue ao ACS712, garantindo que o sensor receba um sinal mais estável e filtrado.
 
    
-<img src="https://github.com/agodoi/m04-semana02a/blob/main/imgs/circuito%20RC%20com%20piezo.png" width="600">
+<img src="https://github.com/agodoi/m04-semana02a/blob/main/imgs/circuito%20RC%20com%20piezo.png" width="400">
 
 
 #### 4. **Benefícios**:
