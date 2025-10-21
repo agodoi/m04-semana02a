@@ -315,9 +315,9 @@ Etapas:
    
 4) Puxe um Arduino Uno R3, copie e cole o código nele.
    
-5) Puxe os componentes e seus valores e faça as ligações eletrônicas indicadas no desenho mostrado acima. Você pude mudar as cores dos fios na barra horizontal superior.
-
-6) Clique em **Iniciar simulação**
+5) Puxe os componentes e seus valores e faça as ligações eletrônicas indicadas no desenho mostrado acima.
+   
+7) Clique em **Iniciar simulação**
    
 8) Clique no botão **Código** e na parte de baixo, clique em **Monitor Serial**. Expanda essa tela ao máximo usando o seu mouse para você visualizar o máximo de valores. E terá os seguintes valores:
 
