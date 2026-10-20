@@ -9,26 +9,22 @@
 
 Nesse encontro, teremos a programação básica com circuito RC, entradas por meio de botão e saídas informacionais simples (Leds). 
 
-Os alunos devem realizar a coleta de dados de um experimento montado pelo professor sobre um circuito RC para filtragem e preencher um gráfico. 
+Os alunos devem realizar a coleta de dados de um experimento montado pelo professor sobre um circuito RC anti-bouncing e preencher um gráfico. 
 
 O relatório deve ser produzido em sala e entregue ao professor no final da instrução.
 
 
-## Vantagens dessa instrução para o seu projeto é resolver 2 problemas
+## Vantagem dessa instrução para o seu projeto: resolver 1 problema
 
 
-### Problema (1): Uso de botões para seleção de menus
+### Problema: Uso de botões para seleção de menus
 
 Por exemplo, pressione botão A para mover as opções do menu, pressione B para selecionar uma opção do menu, etc.
 
 <img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/botoes.png" width="500">
 
-### Problema (2): Filtro para sensor Piezoelétrico
 
-<img src="https://github.com/agodoi/m04-semana02a/blob/main/imgs/Piezo.png" width="500">
-
-
-## Resolvendo o Problema (1)
+## Resolvendo o Problema
 
 Ao pressionar o botão, microscopicamente há várias pressionadas devido às imperfeições das chapinhas metálicas de contatos internos, gerando o sinal que se nota na imagem a seguir.
 
@@ -37,7 +33,7 @@ Ao pressionar o botão, microscopicamente há várias pressionadas devido às im
 **ESSE EFEITO CHAMA-SE BOUNCING (REPIQUE)**
 
 
-Nota-se que o **nível alto** do sinal foi gerado mais de uma vez, e isso confunde o programa que possui um loop rápido de leitura única, resultando na detecção involutária de várias pressionada.
+Nota-se que o **nível alto** do sinal foi gerado mais de uma vez, e isso confunde o programa que possui um loop rápido de leitura única, resultando na detecção involuntária de várias pressionadas.
 
 O prejuízo é que o seu programa vai assumir que você pressionou mais de uma vez e vai avançar o processo sem você querer. Veja a imagem a seguir que mostra, através de uma tela de um osciloscópio, o comportamento de um botão sendo pressionado com bouncing.
 
@@ -47,7 +43,7 @@ O prejuízo é que o seu programa vai assumir que você pressionou mais de uma v
 
 #### (1) Usando hardware, por meio de um componente eletrônico chamado Capacitor
 
-#### (2) Usando software, por meio de uma rotina usando a função ```milis()```
+#### (2) Usando software, por meio de uma rotina usando a função ```millis()```
 
 ---
 
@@ -69,7 +65,7 @@ Portanto, a função do capacitor é basicamente transferir a variação de carg
 
 Reforçando: **precisa haver a variação da carga ao longo de um intervalo de tempo para que a corrente elétrica circule dentro do capacitor**.
 
-Portanto, só repetindo: a quantidade de carga elétricas numa dada área é o mesmo que **tensão elétrica** e a **corrente elétrica** é a movimentação dessas cargas num dado instante de tempo.
+Portanto, só repetindo: a quantidade de cargas elétricas numa dada área é o mesmo que **tensão elétrica** e a **corrente elétrica** é a movimentação dessas cargas num dado instante de tempo.
 
 O capacitor possui basicamente 2 aplicações:
 
@@ -91,7 +87,7 @@ Hoje veremos as duas aplicações.
 <img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/anti_boucing.png" width="300">
 
 ```
-unsigned long time; // váriavel para receber valores da função milli()
+unsigned long time; // variável para receber valores da função millis()
 int cont = 0; // o contador de variações
 int entrada = 7;
 bool estado = LOW; // variável de estado do botão
@@ -116,7 +112,7 @@ void loop() {
     aux = 1;
   }
   if (millis()-time>=500){ // imprime o número de variações a cada 0,5 segundo
-    time=millis(); // guarda o novo ponto de inicio para a proxima analise
+    time=millis(); // guarda o novo ponto de início para a próxima análise
     Serial.print("variações = ");
     Serial.print(cont);
     Serial.print("\n");
@@ -135,21 +131,21 @@ int cont = 0;         //declara a variável cont igual a 0
 bool estado = LOW;    //variável de estado do botão inicia com nível baixo
 unsigned long time;   //variável time tipo long para a função millis()
 
-void setup() {      //estrutura básica de qualquer arduino, chamada void setup()
+void setup() {      //estrutura básica de qualquer Arduino, chamada void setup()
    pinMode(led,OUTPUT);      //especifica que o pino led é do tipo saída
    pinMode(entrada,INPUT);   //especifica que a variável entrada é do tipo entrada
    Serial.begin(9600);      //inicia a comunicação serial para vc imprimir dados nela usando Serial.print()
-   time = millis();         //grava o valor do contador interno chamado milis na variável time
+   time = millis();         //grava o valor do contador interno chamado millis na variável time
 }
 
-void loop() {            //estrutura básica de qualquer arduino, chamada void loop()
+void loop() {            //estrutura básica de qualquer Arduino, chamada void loop()
   
    do{                  //faça ... enquanto ...
       estado_anterior = digitalRead(entrada);   //faz uma leitura digital no pino entrada e guarda em estado_anterior
-      delay(50);                                 //aguarda 50 milisegundos
+      delay(50);                                 //aguarda 50 milissegundos
       estado = digitalRead(entrada);            // novamente faz uma leitura do pino entrada
    }while(estado_anterior != estado);  //aqui definimos um intervalo de tempo de segurança usando a função delay()
-                                       //para sair do loop é necessário identificar uma constancia no estado do botão,
+                                       //para sair do loop é necessário identificar uma constância no estado do botão,
                                        //ele precisa ser o mesmo durante 50 ms
    
    if (estado==HIGH && aux==1){    //testa se estado é nível alto E aux é igual a 1
@@ -166,7 +162,7 @@ void loop() {            //estrutura básica de qualquer arduino, chamada void l
    
       if (millis()-time>=500){     //imprime o número de variações a cada 0,5 segundo
          time=millis();            //guarda o novo ponto de início para a próxima análise
-         Serial.print("variações = ");   //imprime o texto entre aspas duplcas
+         Serial.print("variações = ");   //imprime o texto entre aspas duplas
          Serial.print(cont);             //imprime conteúdo da variável cont
          Serial.print("\n");             //puxa uma linha
          cont = 0;                       //grava 0 na variável cont
@@ -176,7 +172,7 @@ void loop() {            //estrutura básica de qualquer arduino, chamada void l
 
 ### Comportamento Gráfico do C
 
-Você pode reparar que o circuito do Capacitor C está em série com o resistor R. Todo circuito antibouncing é assim: C em série com R. Logo mais, você verá uma prática disso.
+Você pode reparar que o circuito do Capacitor C está em série com o resistor R. Todo circuito anti-bouncing é assim: C em série com R. Logo mais, você verá uma prática disso.
 
 Quando você pressiona o botão de pressão, a tensão interna no C vai se comportar da seguinte forma:
 
@@ -186,13 +182,13 @@ A tensão começa em 0V e vai aumentando até o valor máximo de E que é o valo
 
 ### Quando fecha a chave
 
-Quando você fecha a chave, acontece isso conforme a figura a seguir. O capacitor começa do 0V e vai subindo rapidamente e a corrente I dá um pico e começa cair.
+Quando você fecha a chave, acontece isso conforme a figura a seguir. O capacitor começa do 0V e vai subindo rapidamente, e a corrente I dá um pico e começa a cair.
 
-Como a corrente I do capacitor é igual no resistor, pois estão em série, o I do R também vai dar um pico e começar a cair.
+Como a corrente I do capacitor é igual à do resistor, pois estão em série, o I do R também vai dar um pico e começar a cair.
 
-**Logo, o que acontece no C e no R em termos de corrente I, são iguais em comportamento**.
+**Logo, o que acontece no C e no R em termos de corrente I é igual em comportamento**.
 
-Esse tempo de subida do V e do I depende da combinação dos valores entre C e R. O intervalor inteiro da curva do C é calculadora como sendo T = 1 / R*C. Esse T chama-se TAL e curva gasta sempre 5T. No 6ºT, a curva praticamente já se estabilizou.
+Esse tempo de subida do V e do I depende da combinação dos valores entre C e R. O intervalo inteiro da curva do C é calculado como sendo T = 1 / R*C. Esse T chama-se TAL e a curva gasta sempre 5T. No 6ºT, a curva praticamente já se estabilizou.
 
 <img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png" width="500">
 
@@ -203,53 +199,14 @@ Quando a tensão de C vai se aproximando do valor máximo E e a corrente I vai s
 
 ### Quando abre a chave
 
-Quando você abre a chavinha de pressão, ocorre o contrário: o C que está cheio começa a se descarregar e a corrente que era 0A, volta a circular lentamente até atingir seu valor máximo. 
+Quando você abre a chavinha de pressão, ocorre o contrário: o C que está cheio começa a se descarregar, e a corrente que era 0A volta a circular lentamente até atingir seu valor máximo. 
 
-Como nos interessa a análise somente da tensão V no capacitor, veja o gráfico abaixo de como o C se comporta a cada vez que você pressiona a chavinha do seu projeto. Já a corrente I do capacitor, será analisada no R na parte prática, e como o comportamento de I e V são iguais no R, então, vamos analisar a tensão V também no R.
+Como nos interessa a análise somente da tensão V no capacitor, veja o gráfico abaixo de como o C se comporta a cada vez que você pressiona a chavinha do seu projeto. Já a corrente I do capacitor será analisada no R na parte prática, e como o comportamento de I e V é igual no R, então vamos analisar a tensão V também no R.
 
 
 <img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/gabarito%20da%20simula%C3%A7%C3%A3o.png" width="500">
 
 **Fique atento que esse é o gabarito da prática de hoje**.
-
----
-
-## Resolvendo o Problema (2) Sensor Piezoelétrico
-
-A coleta de informações do sensor piezoelétrico frequentemente vem acompanhada de ruídos elétricos e vibrações indesejadas, que podem gerar leituras instáveis e falsas detecções. Para minimizar esse ruído e garantir que apenas os sinais mecânicos relevantes sejam capturados, é possível utilizar um circuito RC (resistor-capacitor) configurado como filtro passa-baixa.
-
-### Como o filtro RC ajuda:
-
-O filtro passa-baixa atua atenuando as variações rápidas de tensão produzidas por interferências elétricas ou impactos de alta frequência, permitindo que apenas os sinais lentos e reais - relacionados às vibrações significativas - passem para o microcontrolador (como o ESP32). Dessa forma, o circuito reduz ruídos espúrios e melhora a estabilidade e precisão das leituras do sensor piezoelétrico.
-
-### Como implementar o circuito RC para filtragem do sinal piezoelétrico:
-
-#### 1. **Escolha dos componentes**:
-   - **Resistor (R)**: O valor do resistor controla o quanto o sinal será amortecido. Normalmente, valores entre 100 kΩ e 1 MΩ são usados para sensores piezoelétricos, pois ajudam a limitar a corrente sem afetar significativamente o sinal útil.
-   - **Capacitor (C)**: O capacitor é conectado em paralelo com a entrada analógica e serve para armazenar pequenas variações de carga, suavizando as flutuações. Capacitores entre 0,01 µF e 0,1 µF costumam ser adequados.
-   
-#### 2. **Frequência de corte do filtro**:
-   A frequência de corte $$(\(f_c\))$$ é o ponto em que o filtro começa a atenuar sinais de alta frequência (picos rápidos de corrente). Ela pode ser calculada usando a fórmula:
-   
-   $$
-   f_c = \frac{1}{2 \pi R C}
-   $$
-   
-   Onde:
-   - $$(R)$$ é o valor do resistor.
-   - $$(C)$$ é o valor do capacitor.
-
-
-Por exemplo, para minimizar os ruídos de alta frequência gerados pelo sensor piezoelétrico (como vibrações rápidas e interferências elétricas indesejadas), uma frequência de corte na faixa de 50 Hz a 200 Hz pode ser apropriada, permitindo que apenas as variações mais lentas e significativas de vibração sejam detectadas.
-
-#### 3. **Montagem do filtro RC**:
-   - Coloque o resistor em **série** com a linha de sinal do módulo do Piezo.
-   - Conecte o capacitor em **paralelo** entre a saída do resistor e o terra.
-   
-   Esse circuito suavizará picos rápidos na corrente antes que o sinal chegue ao ACS712, garantindo que o sensor receba um sinal mais estável e filtrado.
-
-   
-<img src="https://github.com/agodoi/m04-semana02a/blob/main/imgs/circuito%20RC%20com%20piezo.png" width="400">
 
 ---
 
@@ -261,7 +218,7 @@ Por favor, acessem o [TinkerCad](https://www.tinkercad.com/dashboard), entre com
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png">
-   <img alt="Ciruico Prático TinkerCad" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png)">
+   <img alt="Circuito Prático TinkerCad" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m4-semana2a/blob/main/imgs/circuitoRCTinkerCad.png)">
 </picture>
 
 
@@ -283,7 +240,7 @@ Lista de peças:
 4) Capturar os dados de tensão do C e do R pelo Monitor Serial do TinkerCad
 5) Copiar e colar esses valores para o Colab
 6) Montar um gráfico
-7) Confirmar o compartamento da tensão do C e do R
+7) Confirmar o comportamento da tensão do C e do R
 
 ```
 int pinoNoRC=0; 
@@ -331,9 +288,9 @@ Etapas:
 |1607|4.26|0.74|
 |sua vez| ... | ...|
 
-9) Simule o circuito o máximo possível para adiquirir os dados do Monitor Serial, copie os dados usando o **botão direito do mouse**, o teclado não funciona.
+9) Simule o circuito o máximo possível para adquirir os dados do Monitor Serial e copie os dados usando o **botão direito do mouse**; o teclado não funciona.
 10) O Monitor Serial separa os valores usando **;**. Tem que substituir por **,**. Então, cole no **Bloco de notas** e faça a substituição.
-11) Agora copie e cole e passe para Colab e use esse código
+11) Agora copie, cole e passe para o Colab, e use este código
 
 ```
 import matplotlib.pyplot as plt
@@ -382,20 +339,20 @@ Se você terminar e tiver sucesso, chame o professor na sua bancada e ganhará u
 
 # Conclusões
 
-- Como o capacitor é lerdo para carregar, o bouncing da chave é cancelado. O capacitor alisa a variação do sinal provocado pela imperfeição interna dos contados da chavinha.
+- Como o capacitor é lerdo para carregar, o bouncing da chave é cancelado. O capacitor alisa a variação do sinal provocada pela imperfeição interna dos contatos da chavinha.
 
 E mais:
 
 - Você viu como o capacitor se comporta ao carregar e descarregar.
 - No desafio, tem um exemplo de atuador visual, que é o LED nativo da placa, que pisca a cada vez que o Monitor Serial imprime um novo dado.
-- Você viu como resolver o bouncing usando hardware
-- E existe a opção de resolver por meio de software contornando o tempo de pressionamento do botão. Mas isso pode causar travas no seu programa ou torná-lo complexo
+- Você viu como resolver o bouncing usando hardware.
+- E existe a opção de resolver por meio de software, contornando o tempo de pressionamento do botão. Mas isso pode causar travas no seu programa ou torná-lo complexo.
 
 
 # Ponderada
 
-Durante a prática com o circuito RC, observou-se que a tensão no capacitor sobe e desce de forma suave, enquanto o resistor exibe uma variação complementar. Explique, com base no comportamento observado no gráfico e nos conceitos de tempo de carga e descarga, por que o circuito RC é capaz de eliminar os repiques (bouncing) de um botão e, ao mesmo tempo, filtrar ruídos vindos de sensores piezoelétricos.
+Durante a prática com o circuito RC, observou-se que a tensão no capacitor sobe e desce de forma suave, enquanto o resistor exibe uma variação complementar. Explique, com base no comportamento observado no gráfico e nos conceitos de tempo de carga e descarga, por que o circuito RC é capaz de eliminar os repiques (bouncing) de um botão.
 
-E ainda, em sua resposta, relacione o papel físico do capacitor e do resistor com a ideia de frequência de corte e suavização do sinal.
+E ainda, em sua resposta, relacione o papel físico do capacitor e do resistor com a ideia de constante de tempo (TAL) e suavização do sinal.
 
 ## [Link de entrega](https://docs.google.com/forms/d/1a5iC2O0NT94Br6WpT4LiGdTXJnMiCs6tRjZCtn6-mTw/preview)
