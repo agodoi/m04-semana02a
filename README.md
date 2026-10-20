@@ -188,7 +188,9 @@ Como a corrente I do capacitor é igual à do resistor, pois estão em série, o
 
 **Logo, o que acontece no C e no R em termos de corrente I é igual em comportamento**.
 
-Esse tempo de subida do V e do I depende da combinação dos valores entre C e R. O intervalo inteiro da curva do C é calculado como sendo T = 1 / R*C. Esse T chama-se TAL e a curva gasta sempre 5T. No 6ºT, a curva praticamente já se estabilizou.
+Esse tempo de subida do V e do I depende da combinação dos valores entre C e R. A constante de tempo do circuito é calculada como sendo T = R * C (R em ohms, C em farads e T em segundos). Esse T chama-se TAL e a curva gasta sempre 5T para o capacitor carregar ou descarregar por completo. No 6ºT, a curva praticamente já se estabilizou.
+
+Por exemplo, no circuito da prática de hoje, R = 1 MΩ e C = 10 µF, então T = 1.000.000 * 0,00001 = 10 s. Logo, o capacitor leva cerca de 5T = 50 s para carregar completamente.
 
 <img src="https://github.com/agodoi/m4-semana2a/blob/main/imgs/cargaC-parte1.png" width="500">
 
